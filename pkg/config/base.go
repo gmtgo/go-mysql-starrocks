@@ -32,7 +32,8 @@ type MongoConfig struct {
 type StarrocksConfig struct {
 	Host     string
 	Port     int
-	LoadPort int `mapstructure:"load-port"`
+	LoadHost string `mapstructure:"load-host"`
+	LoadPort int    `mapstructure:"load-port"`
 	UserName string
 	Password string
 }
@@ -40,7 +41,8 @@ type StarrocksConfig struct {
 type DorisConfig struct {
 	Host     string
 	Port     int
-	LoadPort int `mapstructure:"load-port"`
+	LoadHost string `mapstructure:"load-host"`
+	LoadPort int    `mapstructure:"load-port"`
 	UserName string
 	Password string
 }

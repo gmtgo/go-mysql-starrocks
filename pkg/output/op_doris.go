@@ -313,7 +313,7 @@ func (ds *Doris) sendData(content []string, table *schema.Table, targetSchema st
 		}, */
 	}
 	loadUrl := fmt.Sprintf("http://%s:%d/api/%s/%s/_stream_load",
-		ds.Host, ds.LoadPort, targetSchema, targetTable)
+		ds.LoadHost, ds.LoadPort, targetSchema, targetTable)
 	newContent := `[` + strings.Join(content, ",") + `]`
 	req, _ := http.NewRequest("PUT", loadUrl, strings.NewReader(newContent))
 

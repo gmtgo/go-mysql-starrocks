@@ -304,7 +304,7 @@ func (sr *Starrocks) sendData(content []string, table *schema.Table, targetSchem
 		}, */
 	}
 	loadUrl := fmt.Sprintf("http://%s:%d/api/%s/%s/_stream_load",
-		sr.Host, sr.LoadPort, targetSchema, targetTable)
+		sr.LoadHost, sr.LoadPort, targetSchema, targetTable)
 	newContent := `[` + strings.Join(content, ",") + `]`
 	req, _ := http.NewRequest("PUT", loadUrl, strings.NewReader(newContent))
 

@@ -70,6 +70,7 @@ type = "starrocks" # or doris
 [output.config.target] # starrocks连接信息
 host = "127.0.0.1"
 port = 9030
+load-host = "127.0.0.1"
 load-port = 8040
 username = "root"
 password = ""
