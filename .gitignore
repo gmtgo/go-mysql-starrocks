@@ -8,3 +8,4 @@ build_all.sh
 error.log
 release/*
 TODO.txt
+.DS_Store
